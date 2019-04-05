@@ -9,7 +9,9 @@
 	
 
     <properties>
-        <spring.version>3.0.5.RELEASE</spring.version>
+        <!--<spring.version>5.1.0.RELEASE</spring.version>-->
+        <spring.version>4.2.8.RELEASE</spring.version>
+        <!--<spring.version>3.0.5.RELEASE</spring.version>-->
     </properties>
 
     <dependencies>
