@@ -20,17 +20,17 @@
     <authentication-manager>
         <authentication-provider>
             <!--spring 5.1.x need encode pass-->
-            <!--            <password-encoder hash="bcrypt" />
+            <password-encoder hash="bcrypt" />
             <user-service>
                 <user name="user_codewr" password="$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8." authorities="ROLE_USER" />
                 <user name="user_admin" password="$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8." authorities="ROLE_USER, ROLE_ADMIN" />
-            </user-service>-->
+            </user-service>
             <!--spring 3.2.x to 4.2.x-->
             
-            <user-service>
+            <!-- <user-service>
                 <user name="codewr" password="123456" authorities="ROLE_USER" />
                 <user name="admin" password="123456" authorities="ROLE_USER, ROLE_ADMIN" />
-            </user-service>
+            </user-service>-->
         </authentication-provider>
     </authentication-manager>
 

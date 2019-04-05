@@ -22,14 +22,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
 
-////        spring 5.1.x
-//        auth.jdbcAuthentication().dataSource(dataSource).passwordEncoder(passwordEncoder())
-//                .usersByUsernameQuery("select username,password, enabled from users where username=?")
-//                .authoritiesByUsernameQuery("select username, role from user_roles where username=?");
-//        spring 3.2.x - 4.2.x
-        auth.jdbcAuthentication().dataSource(dataSource)
+//        spring 5.1.x
+        auth.jdbcAuthentication().dataSource(dataSource).passwordEncoder(passwordEncoder())
                 .usersByUsernameQuery("select username,password, enabled from users where username=?")
                 .authoritiesByUsernameQuery("select username, role from user_roles where username=?");
+////        spring 3.2.x - 4.2.x
+//        auth.jdbcAuthentication().dataSource(dataSource)
+//                .usersByUsernameQuery("select username,password, enabled from users where username=?")
+//                .authoritiesByUsernameQuery("select username, role from user_roles where username=?");
     }
 
     @Override

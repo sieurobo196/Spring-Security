@@ -17,14 +17,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        
-//        //        spring 5.1.x
-//        auth.inMemoryAuthentication().passwordEncoder(passwordEncoder())
-//                .withUser("codewr").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("USER").and()
-//                .withUser("admin").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("ADMIN");
-//        spring 3.2.x - 4.2.x
-        auth.inMemoryAuthentication().withUser("codewr").password("123456").roles("USER");
-        auth.inMemoryAuthentication().withUser("admin").password("123456").roles("ADMIN");
+
+        //        spring 5.1.x
+        auth.inMemoryAuthentication().passwordEncoder(passwordEncoder())
+                .withUser("codewr").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("USER").and()
+                .withUser("admin").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("ADMIN");
+////        spring 3.2.x - 4.2.x
+//        auth.inMemoryAuthentication().withUser("codewr").password("123456").roles("USER");
+//        auth.inMemoryAuthentication().withUser("admin").password("123456").roles("ADMIN");
     }
 
     //.csrf() is optional, enabled by default, if using WebSecurityConfigurerAdapter constructor
@@ -43,6 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                .exceptionHandling().accessDeniedHandler(new MyAccessDeniedHandler());
 
     }
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         PasswordEncoder encoder = new BCryptPasswordEncoder();

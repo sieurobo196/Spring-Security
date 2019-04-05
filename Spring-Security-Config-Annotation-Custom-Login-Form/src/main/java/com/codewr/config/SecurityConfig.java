@@ -16,11 +16,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-////        spring 5.1.x
-//        auth.inMemoryAuthentication().passwordEncoder(passwordEncoder())
-//                .withUser("codewr").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("USER");
-//        spring 3.2.x - 4.2.x
-        auth.inMemoryAuthentication().withUser("codewr").password("123456").roles("USER");
+//        spring 5.1.x
+        auth.inMemoryAuthentication().passwordEncoder(passwordEncoder())
+                .withUser("codewr").password("$2a$10$EblZqNptyYvcLm/VwDCVAuBjzZOI7khzdyGPBr08PpIi0na624b8.").roles("USER");
+////        spring 3.2.x - 4.2.x
+//        auth.inMemoryAuthentication().withUser("codewr").password("123456").roles("USER");
     }
 
     //.csrf() is optional, enabled by default, if using WebSecurityConfigurerAdapter constructor
